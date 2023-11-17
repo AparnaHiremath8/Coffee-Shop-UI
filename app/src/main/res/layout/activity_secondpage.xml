@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#1e1e24">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/side_bar"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="335dp"
+            android:layout_marginTop="10dp"
+            android:drawableRight="@drawable/bag" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="1dp"
+        android:text="It's a Great Day for Coffee"
+        android:textSize="32sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/searchbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/search_bar"
+        android:ems="10"
+        android:hint="  Find your Coffee..."
+        android:textColorHint="@color/white"
+        android:drawableLeft="@drawable/search">
+    </EditText>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        app:tabSelectedTextColor="#e38035"
+        app:tabIndicatorColor="#e38035"
+        app:tabTextColor="#e3d5ca"
+        app:tabIndicatorHeight="5dp"
+        android:background="#1e1e24"
+        android:scrollbarSize="10dp">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/Tab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hot Coffee"
+            android:layout_gravity="start"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/Tab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cold Coffee"
+            android:layout_gravity="center"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/Tab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Special Coffee"
+            android:layout_gravity="end"/>
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewpager">
+    </androidx.viewpager2.widget.ViewPager2>
+
+
+
+</LinearLayout>
